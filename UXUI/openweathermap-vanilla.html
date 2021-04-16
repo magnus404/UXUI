@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>ÅPARK KOLLEGIET</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Raleway:wght@600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+
+    <header>
+
+        <div id="infobartop">
+            <img id="logoH" src="img/logo.png" alt="logo">
+
+
+            <div id="uret">
+                <div id="clock">
+                    <div id="hrMin"></div>
+                    <div id="sec"></div>
+                </div>
+                <div id="date"></div>
+            </div>
+
+
+            <div id="sprog">
+                <img src="img/denmark.svg" alt="">
+                <img src="img/united-kingdom.svg" alt="">
+            </div>
+
+        </div>
+
+
+
+    </header>
+
+
+
+
+
+    <main>
+
+        <!-- herunder kan du se vejroplysningerne -->
+        <div id="result"></div>
+
+        <div id="bgImg"></div>
+
+
+
+
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Open Modal</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Modal Header</h2>
+            </div>
+            <div class="modal-body">
+                <p>Some text in the Modal Body</p>
+                <p>Some other text...</p>
+            </div>
+            <div class="modal-footer">
+                <h3>Modal Footer</h3>
+            </div>
+        </div>
+        
+        </div>
+
+       
+
+
+
+    </main>
+
+
+
+
+
+
+
+    <footer>
+        <h1>Footer Content</h1>
+
+    </footer>
+
+
+
+    <script>
+        /*
+@datasæt læses sådan:
+
+http://api.openweathermap.org/data/2.5/weather?
+q=Aarhus
+&lang=da
+&units=metric
+&appid=201d090c9cceacfc8931df89310ebfbb
+
+*/
+
+        // token from OpenWeatherMap
+        const appId = 'fd15cce358fdcd90479b999492916307';
+
+        // get the weather JSON data via query URI
+        fetch("http://api.openweathermap.org/data/2.5/weather?q=Aarhus&lang=da&units=metric&appid=" + appId).then(
+            response => {
+                return response.json(); // get weather data as JSON
+            }).then(data => {
+
+            // Work with JSON data here
+            console.log(data); // show what's in the json
+
+            // solnedgang
+            var sunsetMs = data.sys.sunset * 1000; // dato-objektet har brug for millisek. Derfor * 1000
+            var sunset = new Date(sunsetMs);
+
+            // Datoformattering @URI < https://www.w3schools.com/js/js_date_methods.asp >
+            var sunsetTime = sunset.getHours() + ":" + sunset.getMinutes();
+
+
+            console.log(data.weather[0].id);
+
+            var myBg = data.weather[0].id;
+
+            console.log(myBg);
+
+
+            if (myBg >= 200 && myBg <= 299) {
+                console.log("The number is 200");
+                document.body.style.background = "#534f59 url('img/bg/bygninger-simpel.png') no-repeat";
+                document.body.style.backgroundSize = "100%";
+
+            } else if (myBg >= 300 && myBg <= 399) {
+                console.log("The number is 300");
+                document.body.style.background = "#e1e8b0 url('img/bg/bygninger-simpel.png') no-repeat";
+                document.body.style.backgroundSize = "100%";
+            } else if (myBg >= 500 && myBg <= 599) {
+                console.log("The number is 500");
+                document.body.style.background = "#e1e8b0 url('img/bg/bygninger-simpel.png') no-repeat";
+                document.body.style.backgroundSize = "100%";
+            } else if (myBg >= 600 && myBg <= 699) {
+                console.log("The number is 600");
+                document.body.style.background = "#e1e8b0 url('img/bg/bygninger-simpel.png') no-repeat";
+                document.body.style.backgroundSize = "100%";
+            } else if (myBg >= 700 && myBg <= 790) {
+                console.log("The number is 700");
+                document.body.style.background = "#e1e8b0 url('img/bg/bygninger-simpel.png') no-repeat";
+                document.body.style.backgroundSize = "100%";
+            } else if (myBg >= 791 && myBg <= 800) {
+                console.log("The number is 800");
+                document.body.style.background = "#e1e8b0 url('img/bg/bygninger-simpel.png') no-repeat";
+                document.body.style.backgroundSize = "100%";
+            } else {
+                console.log("The number is 801");
+                document.body.style.background = "#e1e8b0 url('img/bg/bygninger-simpel.png') no-repeat";
+                document.body.style.backgroundSize = "100%";
+            }
+
+
+
+
+        }).catch(err => {
+            // Do something with error here
+            console.log('There was an error ...');
+        });
+    </script>
+
+
+    <script src="myscripts.js"></script>
+
+
+
+</body></html>
