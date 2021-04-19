@@ -1,5 +1,16 @@
+:root {
+    /* Farve palette */
+    --f-1: #534f59;
+    --f-2: #dde364;
+    --f-3: #315937;
+    --f-4: #21402e;
+    --f-5: #102226;
+    --f-8: #d2b0b0;
 
-     /* http://meyerweb.com/eric/tools/css/reset/ 
+}
+   
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -56,7 +67,8 @@ table {
 
 
 body {
-         
+         overflow: hidden;
+
       }
 
 
@@ -78,6 +90,15 @@ p {
       }
 
 
+hr {
+    border: 4px solid #dde364;
+}
+
+
+.vl {
+  border-left: 8px solid #dde364;
+  height: 200px;
+}
 
 
 #logoH{
@@ -101,23 +122,32 @@ p {
 
 
 #clock {
-   font-size: 100px;  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+   font-size: 100px;
+    
 }
 
 #date {
     font-size: 29px;
     text-transform: uppercase;
-    margin-top: -14px;
+    margin-top: -9px;
     color: #dde364;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
 }
 
 
 #date span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-weight: 800;
     color: #ffffff;
+    
 }
 
 #sec {
+    
     display: none;
     font-size: 60px;
     margin-top: -28px;
@@ -126,6 +156,7 @@ p {
 }
 
 #sec span {
+    
     color: #4a4848;
     font-size: 130px;
     font-weight: bold;
@@ -139,7 +170,7 @@ p {
 
 
 footer {
-    background-color: #534f59;
+    background-color: #dde364;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -148,20 +179,50 @@ footer {
     overflow:hidden;
 }
 
+fContainer{
+ 
+}
+
+#footInfo{
+    position: absolute;
+    background-color: #dde364;
+    width: 150px;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    z-index: 10;
+}
 
 
 
+.button {
+    position: fixed;
+    left: 100px;
+    top: 300px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+    z-index: 99;
+}
 
 
-
-
-
+#myBtn{
+  
+   
+}
 
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 100; /* Sit on top */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -173,16 +234,16 @@ footer {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #fefefe;
+
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
+  padding: 30px;
   width: 80%; /* Could be more or less, depending on screen size */
+    
 }
 
 /* The Close Button */
 .close {
-  color: #aaa;
+  color: var(--f-2);
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -207,33 +268,81 @@ footer {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+    height: 300px;
+    color: var(--f-2);
+    background-image: url(img/facade.png);
+    background-size: cover;
 }
 
+
+
+.mHeader{
+    font-size: 250px;
+    margin: auto;
+}
+
+mPa{
+    
+}
+
+
+
+
 /* Modal Body */
-.modal-body {padding: 2px 16px;}
+.modal-body {padding: 20px 16px;
+}
+
+
+.mHeader2{
+    font-size: 60px;
+    text-align: center;
+}
+
+.mPa2{
+    text-align: center;
+}
+
+
+.mHeader3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+}
+
 
 /* Modal Footer */
 .modal-footer {
-  padding: 2px 16px;
-  background-color: #5cb85c;
-  color: white;
+    
+    display: flex;
+    justify-content: space-between;
+  padding: 20px 16px;
+    max-width: 800px;
+  margin: auto;
 }
+
+
+
+
+.imgIcon{
+    width: 90px;
+    padding: 20px;
+}
+
+
 
 /* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
   margin: auto;
-    margin-top: 200px;
-    
+  margin-top: 200px;  
   padding-top: 0;
-  border: 1px solid #888;
+  border: 25px solid rgba(221, 227, 100, 1);
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: animatetop;
-  animation-duration: 0.4s
+  animation-duration: 0.4s;
+    background-color: #fefefe;
 }
 
 /* Add Animation */
@@ -241,6 +350,186 @@ footer {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+#canvas{
+   display: none;
+}
+
+
+
+
+
+#skyer{
+     display: none;
+}
+
+.clouds{
+  width:100%;
+  height:100vh;
+  position:relative;
+  top:0;
+  overflow:hidden;
+    
+}
+.clouds .cloud{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%; background:url('https://media.discordapp.net/attachments/708322953649193040/709058890733584484/p-trans.png');
+  background-size:200px 150px;
+  background-repeat:no-repeat;
+}
+.clouds .cloud.cloud1{
+	animation:animate 230s linear infinite;
+	z-index:80;
+	opacity:1;
+	animation-delay:0s;
+}
+.clouds .cloud.cloud2{
+  animation:animate2 170s linear infinite;
+  z-index:79;
+  opacity:0.5;
+  top:10px;
+  background-position-x: -200px;
+  animation-delay:5s;
+}
+.clouds .cloud.cloud3{
+  animation:animate3 160s linear infinite;
+  z-index:78;
+  opacity:0.7;
+  top:5px;
+  background-position-x:1500px;
+  animation-delay:1s;
+}
+.clouds .cloud.cloud4{
+  animation:animate4 225s linear infinite;
+  z-index:77;
+  opacity:0.4;
+  top:30px;
+  background-position-x:1300px;
+  animation-delay:.5s;
+}
+@keyframes animate{
+	0%{
+		background-position-x: -200px;
+	}
+	100%{
+		background-position-x: 1500px;
+	}
+}
+  @keyframes animate2{
+	0%{
+		background-position-x: -200px;
+	}
+	100%{
+		background-position-x: 1500px;
+    }
+}
+@keyframes animate3{
+  0%{
+    background-position-x:1500px;
+  }
+  100%{
+    background-position-x:-200px;
+  }
+}
+@keyframes animate4{
+  0%{
+    background-position-x:1300px;
+  }
+  100%{
+    background-position-x:-200px;
+  }
+}
+.airfy{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Permanent Marker', cursive;
+  font-size:60px;
+  z-index:1001;
+  animation:float 1.5s ease-in-out infinite;
+  animation-direction:alternate;
+}
+@keyframes float{
+  from{top:50%;}
+  to{top:55%;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* OUTER CONTAINER
+
+https://code-boxx.com/html-css-news-ticker-horizontal-vertical/
+
+*/
+.tcontainer {
+    padding-top: 30px;
+  width: 100%;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+  overflow: hidden; /* Hide scroll bar */
+    
+}
+ 
+/* MIDDLE CONTAINER */
+.ticker-wrap {
+  width: 100%;
+  padding-left: 100%; /* Push contents to right side of screen */
+  background-color: #dde364;
+    
+}
+
+/* INNER CONTAINER */
+@keyframes ticker {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+.ticker-move {
+  /* Basically move items from right side of screen to left in infinite loop */
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-name: ticker;
+  animation-duration: 40s;
+}
+.ticker-move:hover{
+  animation-play-state: paused; /* Pause scroll on mouse hover */
+}
+
+/* ITEMS */
+.ticker-item{
+  display: inline-block; /* Lay items in a horizontal line */
+  padding: 0 2rem;
+}
+
+
 
 
 

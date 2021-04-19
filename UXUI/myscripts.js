@@ -9,7 +9,7 @@ setInterval(function () {
         return;
     }
     var dt = new Date();
-    hourEle.innerHTML = toTwoDigit(dt.getHours() % 12) + ":" + toTwoDigit(dt.getMinutes());
+    hourEle.innerHTML = toTwoDigit(dt.getHours() % 24) + ":" + toTwoDigit(dt.getMinutes());
     secEle.innerHTML = "<span>" + toTwoDigit(dt.getSeconds()) + "</span>" + (dt.getHours() / 12 > 1 ? " P" : " A") + "M";
     var d  = dt.toString().slice(0,15);
     dateEle.innerHTML = d.slice(0,4) + "<span>" + d.slice(4,10) + "</span>" + d.slice(10,15);
@@ -28,7 +28,6 @@ function toTwoDigit(num) {
 
 
 //Modal Box
-
 
 // Get the modal
 var modal = document.getElementById("myModal");
