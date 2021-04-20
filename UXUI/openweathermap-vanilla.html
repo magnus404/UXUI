@@ -58,23 +58,50 @@
 
 
 
+
+
+    
+    
+
+        
+        
+        
+
         <!-- Trigger/Open The Modal -->
-        <button id="myBtn" class="button">Open Modal</button>
+        <button id="myBtn" class="button">
+        
+           <h3>Motionsrum</h3>
+
+        <figure>
+            <img class="ikon" src="img/icons/traening%20(1).png" alt="ikon">
+        </figure>
+        <p id="knapP"><strong class="tal">6</strong> personer</p>
+        <img class="pil" src="img/icons/gul-pil.png" alt="drop down">
+        
+        
+        
+        </button>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
+               
                 <div class="modal-header">
                     <span class="close">&times;</span>
                     <h2 class="mHeader">6</h2>
                     <p class="mPa">Bruger rummet nu</p>
                 </div>
+                
+                
                 <div class="modal-body">
+                   
                     <h1 class="mHeader2">MOTIONSRUM</h1>
                     <p class="mPa2">Blok1- stuen - rum 1.1.8</p>
                     <br>
+                    
+                    
                     <h2 class="mHeader3">Hvem er her og hvad laver de</h2>
                     <div class="mPa">
                     <p>Trine G - Prøver at være sund</p>
@@ -84,7 +111,10 @@
                     </div>
                 </div>
                 
+                
+        
                 <hr>
+                
                 
                 <div class="modal-footer">
                  
@@ -151,10 +181,10 @@
         <div class="tcontainer">
             <div class="ticker-wrap">
                 <div class="ticker-move">
-                    <div class="ticker-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    <div class="ticker-item">Aliquam consequat varius consequat.</div>
-                    <div class="ticker-item">Fusce dapibus turpis vel nisi malesuada sollicitudin.</div>
-                    <div class="ticker-item">Pellentesque auctor molestie orci ut blandit.</div>
+                    <div class="ticker-item">Rummet kan ikke lejes juleaften, nytårsaften samt i perioden 15. maj til 15. august grundet eksamensperiode og sommerferie.</div>
+                    <div class="ticker-item">Det kan MAX. bookes 3 måneder i forvejen (Dvs. hvis du vil leje det den 2. maj, kan du tidligst booke den 2. februar). Forespørgsler sendt for tidligt betragtes som ugyldige. Det er kun kollegiets udvalg, der har mulighed for at booke længere forud.</div>
+                    <div class="ticker-item">Rummet kan ikke lejes juleaften, nytårsaften samt i perioden 15. maj til 15. august grundet eksamensperiode og sommerferie.</div>
+                    <div class="ticker-item">Det koster ikke noget at leje rummet, men man skal lægge et depositum på 1500 kr. til at dække eventuelle skader og mangler.</div>
                 </div>
             </div>
         </div>
@@ -207,12 +237,17 @@ q=Aarhus
                 document.body.style.background = "#534f59 url('img/bg/bygninger-simpel.png') no-repeat";
                 ddocument.body.style.backgroundSize = "900px";
                 document.body.style.backgroundPosition = "center";
+                
+                 document.getElementById("skyer").style.display = "block";
 
             } else if (myBg >= 300 && myBg <= 399) {
                 console.log("The number is 300 - Drizzle");
                 document.body.style.background = "#534f59 url('img/bg/bygninger-simpel.png') no-repeat";
                 document.body.style.backgroundSize = "900px";
                 document.body.style.backgroundPosition = "center";
+                
+                 document.getElementById("skyer").style.display = "block";
+                
             } else if (myBg >= 500 && myBg <= 599) {
                 console.log("The number is 500 - Rain");
                 document.body.style.background = "#534f59 url('img/bg/bygninger-simpel.png') no-repeat";
@@ -220,23 +255,31 @@ q=Aarhus
                 document.body.style.backgroundPosition = "center";
                 
                 document.getElementById("myDIV").style.display = "block";
+                 document.getElementById("skyer").style.display = "block";
+                
             } else if (myBg >= 600 && myBg <= 699) {
                 console.log("The number is 600 - Snow");
                 document.body.style.background = "#534f59 url('img/bg/bygninger-simpel.png') no-repeat";
                 document.body.style.backgroundSize = "900px";
                 document.body.style.backgroundPosition = "center";
+                
+                 document.getElementById("skyer").style.display = "block";
+                
             } else if (myBg >= 700 && myBg <= 790) {
                 console.log("The number is 700 - Atmosphere");
                 document.body.style.background = "#534f59 url('img/bg/bygninger-simpel.png') no-repeat";
                 document.body.style.backgroundSize = "900px";
                 document.body.style.backgroundPosition = "center";
+                
+                 document.getElementById("skyer").style.display = "block";
+                
             } else if (myBg >= 791 && myBg <= 800) {
                 console.log("The number is 800 - Clear");
                 document.body.style.background = "#534f59 url('img/bg/bygninger-simpel.png') no-repeat";
                  document.body.style.backgroundSize = "900px";
                  document.body.style.backgroundPosition = "center";
                 
-
+                document.getElementById("skyer").style.display = "block";
                 
             } else {
                 console.log("The number is 801 - Clouds");

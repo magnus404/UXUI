@@ -194,11 +194,9 @@ fContainer{
 }
 
 
-
+/*
 .button {
-    position: fixed;
-    left: 100px;
-    top: 300px;
+    
   background-color: #4CAF50;
   border: none;
   color: white;
@@ -207,16 +205,96 @@ fContainer{
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-    z-index: 99;
+ 
 }
 
 
-#myBtn{
-  
-   
-}
+*/
+
+
+
+
+
+ button {
+     position: fixed;
+    left: 100px;
+    top: 300px;
+            height: 100px;
+            width: 200px;
+            background-color: #bde0ba;
+            border: solid 1px #bde0ba;
+            box-shadow: 5px 5px 10px #1e1a22;
+      margin: 4px 2px;
+      cursor: pointer;
+      z-index: 99;
+        }
+
+        figure {
+            height: 80px;
+            width: 80px;
+            background-color: #534f59;
+            position: absolute;
+            margin-top: -21px;
+            margin-left: 105px;
+        }
+
+        figure .ikon {
+            display: block;
+            margin: auto;
+            margin-top: 0.7rem;
+            /* aner ikke hvorfor den ikke ville centre det helt?? */
+        }
+
+        h3 {
+            text-align: left;
+            margin-top: -0px;
+            font-weight: 700;
+            color: #534f59
+        }
+
+       #knapP {
+            text-align: left;
+            position: absolute;
+            font-size: 12pt;
+        }
+
+
+        .tal {
+            font-weight: 700;
+            font-size: 25pt;
+            color: #534f59;
+        }
+
+        .pil {
+            position: relative;
+            top: 55px;
+        }
+
+        .knap-motion {
+            position: fixed;
+            left: 50px;
+            top: 50px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* The Modal (background) */
 .modal {
@@ -267,7 +345,7 @@ fContainer{
 
 
 .modal-header {
-  padding: 2px 16px;
+    padding: 2px 16px;
     height: 300px;
     color: var(--f-2);
     background-image: url(img/facade.png);
@@ -281,15 +359,22 @@ fContainer{
     margin: auto;
 }
 
-mPa{
-    
+.mPa{
+   
+}
+
+.mPa2{
+    text-align: center;
 }
 
 
 
 
 /* Modal Body */
-.modal-body {padding: 20px 16px;
+.modal-body {
+    padding: 20px 16px;
+    display: block;
+    
 }
 
 
@@ -298,9 +383,7 @@ mPa{
     text-align: center;
 }
 
-.mPa2{
-    text-align: center;
-}
+
 
 
 .mHeader3{
@@ -308,7 +391,20 @@ mPa{
     font-weight: 600;
     font-size: 20px;
     text-align: center;
+    padding: 10px;
 }
+
+
+ul{
+   font-family: 'Montserrat', sans-serif; 
+    list-style: circle;
+}
+
+li{
+    padding: 4px;
+    font-weight: 500;
+}
+
 
 
 /* Modal Footer */
@@ -517,7 +613,7 @@ https://code-boxx.com/html-css-news-ticker-horizontal-vertical/
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: ticker;
-  animation-duration: 40s;
+  animation-duration: 120s;
 }
 .ticker-move:hover{
   animation-play-state: paused; /* Pause scroll on mouse hover */
